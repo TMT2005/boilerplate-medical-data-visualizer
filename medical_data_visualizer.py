@@ -20,9 +20,7 @@ def draw_cat_plot():
 
 
     # 6
-    df_cat = pd.DataFrame({'total':df_cat.groupby(['cardio', 'variable'])['value'].value_counts()})\
-                                     .rename(columns={'cardio':'Cardio','variable':'Variable', 'value':'Value'})\
-                                     .reset_index()
+    df_cat = pd.DataFrame({'total': df_cat.groupby(['cardio', 'variable'])['value'].value_counts()}).rename(columns={'cardio':'Cardio','variable':'Variable', 'value':'Value'}).reset_index()
     
 
     # 7
